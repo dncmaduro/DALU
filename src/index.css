@@ -1,0 +1,97 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: "Shopee Display";
+  src: url("/fonts/ShopeeDisplay-Light.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Shopee Display";
+  src: url("/fonts/ShopeeDisplay-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Shopee Display";
+  src: url("/fonts/ShopeeDisplay-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Shopee Display";
+  src: url("/fonts/ShopeeDisplay-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Shopee Display";
+  src: url("/fonts/ShopeeDisplay-ExtraBold.ttf") format("truetype");
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Shopee Display";
+  src: url("/fonts/ShopeeDisplay-Black.ttf") format("truetype");
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@layer base {
+  :root {
+    --background: 210 22% 96%;
+    --foreground: 222 25% 12%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 222 25% 12%;
+
+    /* ADD */
+    --popover: 0 0% 100%;
+    --popover-foreground: 222 25% 12%;
+
+    --primary: 207 65% 34%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 207 36% 93%;
+    --secondary-foreground: 207 55% 25%;
+
+    --muted: 210 18% 94%;
+    --muted-foreground: 215 14% 40%;
+
+    --border: 214 18% 86%;
+    --input: 214 18% 80%;
+    --ring: 207 65% 34%;
+
+    --destructive: 0 62% 42%;
+    --destructive-foreground: 0 0% 100%;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply min-h-screen bg-background text-foreground antialiased;
+    font-family: "Shopee Display", ui-sans-serif, system-ui, sans-serif;
+  }
+
+  button,
+  input,
+  textarea,
+  select {
+    font: inherit;
+  }
+}

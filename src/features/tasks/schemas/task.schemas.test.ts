@@ -1,0 +1,3 @@
+import { describe, expect, it } from 'vitest'
+import { assignmentSchema, backlogSchema } from './task.schemas'
+describe('task schemas', () => { it('requires a backlog title only', () => { expect(backlogSchema.safeParse({ title: '' }).success).toBe(false); expect(backlogSchema.safeParse({ title: 'Ý tưởng nội dung' }).success).toBe(true) }); it('requires all assignment fields', () => { expect(assignmentSchema.safeParse({}).success).toBe(false); expect(assignmentSchema.safeParse({ category_id: '3fa85f64-5717-4562-b3fc-2c963f66afa6', deadline: '2026-08-10', complexity: 'medium', priority: 'high', assigned_to: '3fa85f64-5717-4562-b3fc-2c963f66afa6', estimated_hours: 2, status: 'todo' }).success).toBe(true) }) })
